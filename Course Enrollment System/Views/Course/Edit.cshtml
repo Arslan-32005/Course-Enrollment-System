@@ -1,0 +1,21 @@
+﻿@model Course_Enrollment_System.Models.Course
+<link rel="stylesheet" href="~/css/site.css" />
+<div><h2>Edit Course Data</h2></div>
+<div><p>Please fill in the following details to edit the course information.</p></div>
+<div> 
+    <form  method="post" action="/Course/Edit/@Model.ID" id="CourseForm">
+        <label for="CourseName">Course Name</label>
+        <input type="text" name="CourseName" id="CourseName" value="@Model.CourseName" /><br />
+        <label for="Instructor">Instructor</label>
+        <input type="text" name="Instructor" id="Instructor" value="@Model.Instructor" /><br />
+        <label for="Duration">Duration</label>
+        <input type="number" name="Duration" id="Duration" value="@Model.Duration" /><br />
+        <label for="Credits">Credits</label>
+        <input type="number" name="Credits" id="Credits" value="@Model.Credits" /><br />
+        <label for="Fee">Fee</label>
+        <input type="number" name="Fee" id="Fee" value="@Model.Fee" /><br />
+        <button type="submit">Edit Course</button>
+</form>
+    <script src="/js/site.js"></script>
+</div>
+

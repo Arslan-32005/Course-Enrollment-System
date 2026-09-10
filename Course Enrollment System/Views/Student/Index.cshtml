@@ -1,0 +1,39 @@
+﻿@model List<Course_Enrollment_System.Models.Student>
+<div class="Student-Info"><h2>Student Information</h2></div>
+<div class="Welcome-message"><p>Welcome to the Student Information page.</p></div>
+<div class="student-Table">
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Contact Number</th> 
+                <th>Email</th>
+                <th>Enrollment Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var std in Model)
+            {
+                <tr>
+                    <td>@std.ID</td>
+                    <td>@std.Name</td>
+                    <td>@std.Age</td>
+                    <td>@std.Gender</td>
+                    <td>@std.ContactNumber</td>
+                    <td>@std.Email</td>
+                    <td>@std.EnrollmentDate</td>
+                    <td><a href="/Student/Edit/@std.ID" class="Edit-Link">Edit</a></td>
+                    <td><a href="/Student/Delete/@std.ID"class="Delete-Link">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<form action="/Student/Index" method="get" class="Search-Form">
+<label for="SearchName">Search:</label>
+<input type="text" id="SearchName" name="SearchName" />
+
+</form>

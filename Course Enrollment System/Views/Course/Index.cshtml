@@ -1,0 +1,50 @@
+﻿@model List<Course_Enrollment_System.Models.Course>   
+<div id="course-info"><h2>Course Related Information</h2></div>
+<div id="welcome-message"><p>Welcome to the Course Information page.</p></div>
+<div class="Course-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Course Instructor</th>
+                <th>Duration</th>
+                <th>Credits</th>
+                <th>Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cour in Model)
+            {
+                <tr>
+                    <td>@cour.ID</td>
+                    <td>@cour.CourseName</td>
+                    <td>@cour.Instructor</td>
+                    <td>@cour.Duration</td>
+                    <td>@cour.Credits</td>
+                    <td>@cour.Fee</td>
+                    <td><a href="/Course/Edit/@cour.ID" class="Edit-Link">Edit</a></td>
+                    <td><a href="/Course/Delete/@cour.ID" class="Delete-Link">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<form action="/Course/Index" method="get" class="Fee-Form">
+    <label for="SortByFee">Sort By Fee:</label>
+    <button type="submit" name="SortByFee" value="Sort By Fee">Sort By Fee</button>
+</form>
+@* <div class="pagination">
+    <a href="/Course/Index?page=1" class="page-link">Previous</a>
+    <a href="/Course/Index?page=2"class="page-link">Next</a>
+</div> *@
+@if (ViewBag.CurrentPage > 1)
+{
+    <a href="/Course/Index?page=@(ViewBag.CurrentPage - 1)">Previous</a>
+}
+
+@if (ViewBag.CurrentPage < ViewBag.TotalPages)
+{
+    <a href="/Course/Index?page=@(ViewBag.CurrentPage + 1)">Next</a>
+}

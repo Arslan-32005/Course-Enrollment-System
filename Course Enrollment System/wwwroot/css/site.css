@@ -1,0 +1,247 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f1f8e9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.Student-Info,
+.Welcome-message,
+.course-info,
+#course-info,
+#welcome-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .Student-Info h2,
+    .course-info h2,
+    #course-info h2 {
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .Welcome-message p,
+    .welcome-message p,
+    #welcome-message p {
+        color: #666;
+        font-size: 15px;
+    }
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #4CAF50;
+        outline: none;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+    }
+
+button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 15px;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+    button:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+    }
+
+
+.Search-Form {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+    .Search-Form label {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .Search-Form input {
+        margin-bottom: 0;
+    }
+
+
+.Fee-Form {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+.Fee-Form label {
+        text-align: center;
+        margin-bottom: 0;
+}
+.Fee-Form button {
+        margin-top: 0;
+}
+.Fee-Form a {
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background 0.3s;
+}
+    .Fee-Form a:hover {
+        background: #1976D2;
+    }
+.Edit-Link {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.Delete-Link {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+body {
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+}
+
+div {
+    margin: auto;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 15px;
+}
+.pagination {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 0 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
