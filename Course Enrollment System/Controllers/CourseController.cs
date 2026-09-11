@@ -29,11 +29,13 @@ namespace Course_Enrollment_System.Controllers
 
             ViewBag.CurrentPage = page;
             ViewBag.TotalPages = totalPages;
+            ViewBag.SortbyFee = SortbyFee;
 
             return View(sortedCourses);
         }
         public IActionResult Add()
         {
+            
             return View();
         }
         [HttpPost]

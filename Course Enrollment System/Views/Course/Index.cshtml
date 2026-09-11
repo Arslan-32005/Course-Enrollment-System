@@ -31,14 +31,13 @@
     </table>
 </div>
 
-<form action="/Course/Index" method="get" class="Fee-Form">
-    <label for="SortByFee">Sort By Fee:</label>
-    <button type="submit" name="SortByFee" value="Sort By Fee">Sort By Fee</button>
-</form>
+
+<a href="/Course/Index?SortbyFee=true" class="sort-link">Sort By Fee</a>
 @* <div class="pagination">
     <a href="/Course/Index?page=1" class="page-link">Previous</a>
     <a href="/Course/Index?page=2"class="page-link">Next</a>
 </div> *@
+<div class="pagination-links">
 @if (ViewBag.CurrentPage > 1)
 {
     <a href="/Course/Index?page=@(ViewBag.CurrentPage - 1)">Previous</a>
@@ -48,3 +47,4 @@
 {
     <a href="/Course/Index?page=@(ViewBag.CurrentPage + 1)">Next</a>
 }
+</div>

@@ -244,4 +244,17 @@ p {
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
 }
+.pagination-links a, .sort-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+    .pagination-links a:hover, .sort-link:hover {
+        background-color: #45a049;
+    }
 
